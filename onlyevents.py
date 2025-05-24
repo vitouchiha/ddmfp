@@ -9,8 +9,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-MFPLINK = ""     # non mettere lo / finale al link
-MFPPSW = ""
+MFPLINK = "https://fabianaqq-onda.hf.space"     # non mettere lo / finale al link
+MFPPSW = "onda"
 
 # Costanti
 NUM_CHANNELS = 10000

@@ -1,0 +1,18 @@
+name: merge-patch
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */2 * * *"
+
+jobs:
+  merge_patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v4
+
+      - name: Esegui auto_merge_and_patch.sh (con bestemmie e birra)
+        run: |
+          chmod +x ./auto_merge_and_patch.sh
+          ./auto_merge_and_patch.sh || echo "Bestemmia: errore nello script auto_merge_and_patch.sh"
